@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Voucher - Stone Hotels 8542</title>
+    <style>
+        .header, .header-space{
+        height: 100px;
+        text-align:center;
+        }
+        .footer, .footer-space {
+        height: 50px;
+        text-align:center;
+        }
+        .header {
+        position: fixed;
+        top: 0;
+        }
+        .footer {
+        position: fixed;
+        bottom: 0;
+        }
+        .header,.footer{
+        width:100%;
+        display:none
+        }
+        @media print{
+        .header,.footer{
+        display:block;
+        }
+        .no-print{
+        display: none;
+        }
+      .fixed-footer{
+    display:grid !important;
+    justify-content: center;
+    width: 100%;
+      } }
+        table, th, td,p {
+        border: 0px;
+        padding: 1px;
+        font-size:11px;
+        vertical-align: top;
+        font-family: Century, Times, Arial; 
+        }
+        table {
+        border-spacing: 0px;
+        border-collapse: collapse;
+        margin-top:-1px;
+        width:100%;
+        background-color: white;
+        color: black;
+        }
+        th {
+        text-align: left;
+        }
+        ol {
+        display: block;
+        list-style-type: decimal;
+        margin-top: 0em;
+        margin-bottom:0em;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 15px;
+        }
+        ul {
+        display: block;
+        margin-top: 0em;
+        margin-bottom:0em;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 15px;
+        font-size:11px;
+        }
+        h1,h2,h3,h4,h5,h6 {
+        margin:0; 
+        padding: 0;
+        font-family: Century, Times, Arial;
+        }
+        
+    </style>
+</head>
+<body>
+  <table style="border-spacing: 0;margin: 0 auto; width: 100%;max-width: 800px;background: #fff;padding: 5px;">
+      <thead>
+      <tr>
+      <td style="text-align: center;">
+      <!-- Header to be repeat html here -->
+      <h2 style="font-size: 22px;">COOPER ENTERPRISES (PVT) LTD</h2>
+      <h4 style="font-weight: 400; font-size: 16px;">Kahanda Kanda, Angulugaha, Galle</h4>
+      <h4 style="font-weight: 400; font-size: 15px;">Company Registration No. Pv 3713</h4>
+      <h4 style="font-weight: 400; font-size: 15px;">Company VAT No. {{tin}}</h4>
+
+      <img src="{{logo}}" style="padding: 0px 0px; width: 100px; height: 100px; margin: 5px 0;" alt="Logo" border="0">
+
+      <h1 style="margin-top: 0;">PROFORMA INVOICE</h1>
+      <p style="margin: 0;">(This is not a Tax Invoice)</p>
+      </td>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr>
+      <td>
+      <!-- Body content -->
+      <div style="display: flex; justify-content: space-between; margin-top: 1rem;">
+        <div>
+          <table>
+            <tr>
+              <td>Room</td>
+              <td>: &nbsp; {{roomNumber}}</td>
+            </tr>
+            <tr>
+              <td>Meal Plan</td>
+              <td>: &nbsp; {{mealPlan}}</td>
+            </tr>
+            <tr>
+              <td>Company / TA</td>
+              <td>: &nbsp; {{companyName}} {{travelAgent}}</td>
+            </tr>
+            <tr>
+              <td>Company / TA Address</td>
+              <td>: &nbsp; {{address}} {{invoiceAddress}}</td>
+            </tr>
+            <tr>
+              <td>Company/TA VAT</td>
+              <td>: &nbsp; {{companyTinNumber}} {{travelAgentTINNumber}}</td>
+            </tr>
+          </table>
+        </div>
+        <div style="width: 50%;">
+          <table>
+            <tr>
+              <td>Proforma Invoice No</td>
+              <td>: &nbsp; {{invoice}}</td>
+            </tr>
+            <tr>
+              <td>Voucher No</td>
+              <td>: &nbsp; {{voucherNumber}}</td>
+            </tr>
+            <tr>
+              <td>Booking Reference</td>
+              <td>: &nbsp; {{reservationNumber}}</td>
+            </tr>
+            <tr>
+              <td>Invoice Date</td>
+              <td>: &nbsp; {{dateTime}}</td>
+            </tr>
+            <tr>
+              <td>Arrival Date</td>
+              <td>: &nbsp; {{checkIn}}</td>
+            </tr>
+            <tr>
+              <td>Departure Date</td>
+              <td>: &nbsp; {{checkOut}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      
+      <h4>Guest Name: &nbsp; {{guestName}}</h4>
+      <table style="border-bottom: 1px solid #444;">
+        <tr>
+          <td colspan="2">
+            {{RevenueandTaxesConsolidationForThai}}
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 50%;">
+            <table>
+              <tr>
+                <td><h4><u>Bank Account Details</u></h4></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><b>A/c Name</b></td>
+                <td>: &nbsp; Cooper Enterprises (Pvt) Ltd</td>
+              </tr>
+              <tr>
+                <td><b>Acc. No</b></td>
+                <td>: &nbsp; 013010010899</td>
+              </tr>
+              <tr>
+                <td><b>Bank</b></td>
+                <td>: &nbsp; Hatton National Bank, Galle Branch</td>
+              </tr>
+              <tr>
+                <td><b>Bank Code</b></td>
+                <td>: &nbsp; 7083 Branch Code: 013</td>
+              </tr>
+              <tr>
+                <td><b>SWIFT Code</b></td>
+                <td>: &nbsp; HBLILKLX</td>
+              </tr>
+            </table>
+          </td>
+          <td>
+            <table>
+              <tr>
+                <td style="border-bottom: 0.1px solid #444; height: 20px;"><b>Total</b></td>
+                <td style="border-bottom: 0.1px solid #444; height: 20px;">: &nbsp; {{totalLocalDebitAmount}}</td>
+              </tr>
+              <tr>
+                <td style="border-bottom: 0.1px solid #444; height: 20px;"><b>Less: Payments</b></td>
+                <td style="border-bottom: 0.1px solid #444; height: 20px;">: &nbsp; </td>
+              </tr>
+              <tr>
+                <td style="border-bottom: 0.1px solid #444; height: 20px;"><b>Balance Due</b></td>
+                <td style="border-bottom: 0.1px solid #444; height: 20px;">: {{balanceAmount}} {{currencyCode}}</td>
+              </tr>
+              <tr>
+                <td colspan="2" style="text-align: center;">
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+
+      <table style="border-top: 1px solid #444;">
+        <tr>
+          <td colspan="2"></td>
+          <td>{{taxStructure}}</td>
+        </tr>
+      </table>
+
+      <div class="Terms" style="margin-top: 1rem;">
+        <h4>TERMS</h4>
+        <ul>
+          <li>{{terms}}</li>
+        </ul>
+        <h4 style="margin-top: 1rem;">CANCELLATION POLICY</h4>
+        <ul>
+          <li>{{cancellationPolicy}}</li>
+        </ul>
+      </div>
+      </td>
+      </tr>
+      </tbody>
+
+      <tfoot>
+      <tr>
+      <td style="text-align: center;">
+      <!-- Footer to be repeat html here -->
+      <table class="fixed-footer" style="border-top: 0.1px solid #444; width: 100%; opacity: 80%; margin-top: 2rem; position: absolute; bottom: 0; display: none;">
+        <tr>
+          <td style="width: 100%; text-align: center; padding-top: 10px;">
+            <p>*** This is an original computer generated invoice, official seal or signature not compulsory ***</p>
+            <h6>Telephone: +94(0)77 3429 555 E-mail: info@kahandakanda.com</h6>
+          </td>
+        </tr>
+      </table>
+      </td>
+      </tr>
+      </tfoot>
+  </table> 
+</body>
+
+</html>
