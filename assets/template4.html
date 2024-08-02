@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <style>
+         .header, .header-space{
+         height: 100px;
+         text-align:center;
+         }
+         .footer, .footer-space {
+         height: 50px;
+         text-align:center;
+         }
+         .header {
+         position: fixed;
+         top: 0;
+         }
+         .footer {
+         position: fixed;
+         bottom: 0;
+         }
+         .header,.footer{
+         width:100%;
+         display:none
+         }
+         @media print{
+         .header,.footer{
+         display:block;
+         }
+         .no-print{
+         display: none;
+         }
+         .fixed-footer{
+     display:grid !important;
+     justify-content: center;
+     width: 100%;
+       }
+         }
+         table, th, td,p {
+         border: 0px;
+         padding: 1px;
+         font-size:11px;
+         vertical-align: top;
+         font-family: Century, Times, Arial; 
+         }
+         table {
+         border-spacing: 0px;
+         border-collapse: collapse;
+         margin-top:-1px;
+         width:100%;
+         background-color: white;
+         color: black;
+         }
+         th {
+         text-align: left;
+         }
+         ol {
+         display: block;
+         list-style-type: decimal;
+         margin-top: 0em;
+         margin-bottom:0em;
+         margin-left: 0;
+         margin-right: 0;
+         padding-left: 15px;
+         }
+         ul {
+         display: block;
+         margin-top: 0em;
+         margin-bottom:0em;
+         margin-left: 0;
+         margin-right: 0;
+         padding-left: 15px;
+         font-size:11px;
+         }
+         h1,h2,h3,h4,h5,h6 {
+         margin: 0px 0px 0px 0px; 
+         padding: 0px 0px 0px 0px;
+         font-family: Century, Times, Arial;
+         }
+         inline.inline {
+         display: inline-block;
+         width: 220px;
+         }
+      </style>
+   </head>
+   <br>
+   <table style="border: 0px solid black;margin: 0px auto;width: 100%;max-width: 700px">
+      <tr>
+         <td style="border: 0px">
+            <table style="border: 0px">
+               <tr>
+                  <td style="width:60%;border: 0px;"><img src="[[Logo]]" style="padding: 10px 0px; height:  80px;object-fit:  contain;" alt=" ">
+                  </td>
+                  <td style="width:40%;border: 0px;text-align:right;">
+                     <span style="font-size:14px"><b>Stone Hotels Dhiffushi</b></span><br>
+                     Stone Hotels Dhiffushi , Dhiffushi 08030,<br>
+                     Maldives. Tel: 332 8888
+                  </td>
+               </tr>
+            </table>
+            <table style="border: 0px">
+               <tr>
+                  <td style="width:100%;border-top: .5px solid black;border-bottom: .5px solid black;text-align:center">
+                     <span style="font-size:14px"><b>PRO - FORMA INVOICE</b></span><br>[This is not a TAX Invoice]
+                  </td>
+               </tr>
+            </table>
+            <br>
+            <table style="border: 0px;">
+               <tr>
+                  <td style="border: 0px solid black;width:50%;vertical-align:top">
+                     <table style="border: 0px;">
+                        <tr>
+                           <td style="width:23%;height:15px;font-weight: bold;">Guest Name</td>
+                           <td style="height:15px">:&nbsp;</td>
+                           <td style="width:77%;height:15px;">[[GuestName]]</td>
+                        </tr>
+                        <tr>
+                           <td style="width:23%;height:15px;font-weight: bold;">Nationality</td>
+                           <td style="height:15px">:&nbsp;</td>
+                           <td style="width:77%;height:15px;">[[Nationality]]</td>
+                        </tr>
+                        <tr>
+                           <td style="width:23%;height:15px;font-weight: bold;">Company Name</td>
+                           <td style="height:15px">:&nbsp;</td>
+                           <td style="width:77%;height:15px;">[[CompanyName]]</td>
+                        </tr>
+                        <tr>
+                           <td style="width:23%;height:15px;font-weight: bold;">Company Address</td>
+                           <td style="height:15px">:&nbsp;</td>
+                           <td style="width:77%;height:15px;">[[CompanyAddress]]</td>
+                        </tr>
+                        <tr>
+                           <td style="width:23%;height:15px;font-weight: bold;">Arrival/Departure</td>
+                           <td style="height:15px">:&nbsp;</td>
+                           <td style="width:77%;height:15px;">[[CheckIn]]&nbsp;/&nbsp;[[CheckOut]]</td>
+                        </tr>
+                        <tr>
+                           <td style="width:23%;height:15px;font-weight: bold;">ADT/CHD/INF</td>
+                           <td style="height:15px">:&nbsp;</td>
+                           <td style="width:77%;height:15px;">[[Adult]]&nbsp;/&nbsp;[[Child]]</td>
+                        </tr>
+                        <tr>
+                           <td style="width:23%;height:15px;font-weight: bold;">Confirmation #</td>
+                           <td style="height:15px">:&nbsp;</td>
+                           <td style="width:77%;height:15px;">[[ReservationNumber]]</td>
+                        </tr>
+                     </table>
+                  </td>
+                  <td style="border: 0px solid black;width:35%;vertical-align:top">
+                     <table style="border: 0px;">
+                        <tr>
+                           <td style="width:50%;height:15px;font-weight: bold;">Pro-Forma Invoice No.</td>
+                           <td style="height:15px">:&nbsp; [[Invoice]]</td>
+            
+                        </tr>
+                        <tr>
+                           <td style="width:50%;height:15px;font-weight: bold;">Invoice Date</td>
+                           <td style="height:15px">:&nbsp; [[DateTime]]</td>
+                  
+                        </tr>
+                        <tr>
+                           <td style="width:50%;height:15px;font-weight: bold;">Booking Date</td>
+                           <td style="height:15px">:&nbsp; [[BookingDateForThai]] </td>
+               
+                        </tr>
+                        <tr>
+                           <td style="width:50%;height:15px;font-weight: bold;">Booking Ref. No.</td>
+                           <td style="height:15px">:&nbsp; </td>
+                     
+                        </tr>
+                        <tr>
+                           <td style="width:50%;height:15px;font-weight: bold;">Voucher No.</td>
+                           <td style="height:15px">:&nbsp; 	[[VocuherNumber]]</td>
+                        
+                        </tr>
+                  
+                     </table>
+                  </td>
+               </tr>
+            </table>
+            <br>
+            [[RevenueandTaxesConsolidationForThai]]
+            <!-- [[AddonDetails]] -->
+            <hr>
+            <table>
+               <tr style="float: right;">
+                  <td >Grand Total (  [[CurrencyCode]] )</td>
+                  <td >  <b>  : &nbsp;  [[TotalLocalDebitAmount]] </b></td>
+               </tr>
+            </table>
+            <table style="width: 30%; margin: 10px 0;">
+               <tr>
+                  <th>Meal Plan</th>
+                  <td>: &nbsp; [[MealPlan]]</td>
+               </tr>
+            </table>
+            <table style="border: 0px; margin-top: 25px;">
+               <tr>
+                  <td style="width:28%;height:15px;"> <b> REMITTANCE TO BE MADE TO: </b> </td>
+                  <td style="height:15px"></td>
+                  <td style="width:72%;height:15px;"></td>
+               </tr>
+               <tr>
+                  <td style="width:28%;height:15px;">Beneficiary Name</td>
+                  <td style="height:15px">:&nbsp;</td>
+                  <td style="width:72%;height:15px;">Stone Hotels Maldices Pvt.Ltd</td>
+               </tr>
+               <tr>
+                  <td style="width:28%;height:15px;">Bank Account Number</td>
+                  <td style="height:15px">:&nbsp;</td>
+                  <td style="width:72%;height:15px;">7730000347920</td>
+               </tr>
+               <tr>
+                  <td style="width:28%;height:15px;">Bank Swift ID</td>
+                  <td style="height:15px">:&nbsp;</td>
+                  <td style="width:72%;height:15px;">MALBMVMV</td>
+               </tr>
+               <tr>
+                  <td style="width:28%;height:15px;">Bank Name</td>
+                  <td style="height:15px">:&nbsp;</td>
+                  <td style="width:72%;height:15px;">Bank of Maldives</td>
+               </tr>
+               <tr>
+                  <td style="width:28%;height:15px;">Bank Address</td>
+                  <td style="height:15px">:&nbsp;</td>
+                  <td style="width:72%;height:15px;">BML Buliding 11, Boduthakurfaanu Magu, Male', Rep.of Maldives</td>
+               </tr>
+            </table>
+            <table style="border: 0px; margin-top: 5rem;">
+               <br><br>
+               <tr>
+                  <td style="width:100%;border: 0px;text-align:center;">
+                     <b>Terms & Condition</b><br>
+                     50% advance payment will be required on confirmation of the booking to secure the room reservation and meeting space.
+                     Balance payments including all extras are to be settled at the hotel prior to departure by cash or card. We will not accept cheques upon departure.
+                  </td>
+               </tr>
+            </table>
+            <table style="border: 0px;">
+               <br><br><br>
+               <tr>
+                  <td style="width:33.33%;border: 0px;text-align: center;text-decoration-line: overline"><b>  &nbsp;&nbsp; Checked By &nbsp; &nbsp;</b></td>
+                  <td style="width:33.33%;border: 0px;">&nbsp;</td>
+                  <td style="width:33.33%;border: 0px;text-align: center;text-decoration-line: overline"> <b> &nbsp; &nbsp; Approved &nbsp; &nbsp; </b></td>
+               </tr>
+            </table>
+
+
+            <table class="fixed-footer" style="border-top: 0.1px solid #444;  width: 100%; opacity: 80%; margin-top: 2rem; position: absolute; bottom: 0; display: none;">
+               <tr>
+                   <td style="width: 100%; text-align: center; padding-top: 10px; ">
+                   
+                       <b>Stone Hotels Maldives Pvt. Ltd.</b> 7th Floor, M. Stella, Feerozu Magu, 20255 Male’, Maldives<br>
+                       TP: +960 332 8888 M +960 738 8881  E-mail: <a href="info@stonehotels.mv">info@stonehotels.mv</a>,
+                       Website: <a href="www.stonehotels.mv">www.stonehotels.mv</a>
+                   </td>
+               </tr>
+           </table>
+         </td>
+      </tr>
+   </table>
+</html>

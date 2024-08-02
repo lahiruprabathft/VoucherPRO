@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Club Hotel Dolphin</title>
+<style>
+
+
+         table, th, td {
+         border: 0px;
+         padding: 2px;
+         font-size:12px;
+         vertical-align: top;
+         font-family:'Courier New', Courier, monospace;
+         font-weight: 600;
+                  /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+         border: 0.5px solid  black;
+         }
+         table {
+         border-spacing: 0px;
+         border-collapse: collapse;
+         margin-top:-1px;
+         width:100%;
+         background-color: white;
+         color: black;
+         border: 0.5px solid  black;
+         
+         }
+         ol {
+         display: block;
+         list-style-type: decimal;
+         margin-top: 0em;
+         margin-bottom:0em;
+         margin-left: 0;
+         margin-right: 0;
+         padding-left: 15px;
+         }
+         ul {
+         display: block;
+         margin-top: 0em;
+         margin-bottom:0em;
+         margin-left: 0;
+         margin-right: 0;
+         padding-left: 15px;
+         font-size:11px;
+         }
+         h1,h2,h3,h4,h5,h6 {
+         margin: 0px 0px 0px 0px; 
+         padding: 0px 0px 0px 0px;
+         font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+         font-weight: 400;
+         }
+         h4{
+            font-size: 14px;
+         }
+
+</style>
+
+</head>
+<body>
+    <div class="continer" style="max-width: 800px; width: 100%; height: full; margin: 0 auto;">
+     
+        <div class="header" style="display: flex; padding:  0px; width: 100%; justify-content: space-between;">
+            <div class="logo">
+                <img src="{{logo}}" style="padding: 0px 0px; width: 100px; height: 100px; margin: 5px 0;" alt="Logo" border="0">
+            </div>
+            <div class="address" style="text-align: right;">
+                <h1>{{propertyName}}</h1>
+                <h4>{{propertyAddress}}</h4>
+                    <h4>{{propertyContact}} </h4>
+                    <h4>{{propertyEmail}}  </h4>
+                    <h4>{{propertyWeb}}</h4>
+
+            </div>
+
+
+        </div> 
+        <div class="invoice">
+                <div class="proforma" style="width: 100%; height: 35px; text-align: center; margin-top: 20px; align-items: center;  background-color:rgb(75, 74, 63) ;"> <h2 style="font-size:28px; color: #fff; vertical-align: middle; text-transform: uppercase; padding-top: 2px;">Pro-forma Invoice</h2> </div>
+
+                <!-- space Table -->
+                <table>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+               <!-- space Table -->
+                <table>
+                 
+                    <tr>
+                        <td style="width: 15%;">Name of Agent </td>
+                        <td style="width: 35%;">{{companyName}} {{travelAgent}}</td>
+                        <td style="width: 15%;">Booking date</td>
+                        <td style="width: 35%;">{{bookingDate}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 15%;">Name of Guest</td>
+                        <td style="width: 35%;">{{guestName}}</td>
+                        <td style="width: 15%;">Invoice Date </td>
+                        <td style="width: 35%;">{{dateTime}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 15%;">E-mail </td>
+                        <td style="width: 35%;">{{guestEmail}}</td>
+                        <td style="width: 15%;">Invoice No:</td>
+                        <td style="width: 35%;">{{invoice}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 15%;">Contact no </td>
+                        <td style="width: 35%;">{{guestContact}}</td>
+                        <td style="width: 15%;">Reservation #</td>
+                        <td style="width: 35%;">{{reservationNumber}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 15%;">Address </td>
+                        <td style="width: 35%;"> {{address}} {{invoiceAddress}}</td>
+                        <td style="width: 15%;">Vocuher #</td>
+                        <td style="width: 35%;">{{voucherNumber}}</td>
+                    </tr>
+                </table>
+
+                <!-- space Table -->
+                <table style="background-color: rgb(233, 233, 233);"> 
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+               <!-- space Table -->
+               <table style="text-align: center;">
+                <tr>
+                    <td>Check-in Date</td>
+                    <td>Check-out Date</td>
+                    <td>No of Pax</td>
+                    <td> No of Night</td>
+                </tr>
+                <tr>
+                    <td>{{checkIn}}</td>
+                    <td>{{checkOut}}</td>
+                    <td>  [[PersonThai]]</td>
+                    <td> [[NightsThai]]</td>
+                </tr>
+               </table>
+               <!-- space Table -->
+               <table style="background-color: rgb(233, 233, 233);"> 
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+                  <!-- Your existing template -->
+       <div class="transactions">
+        <table>
+          <thead>
+            <tr>
+              <th  style="border: 1px solid black; padding: 3px;">#</th>
+              <th  style="border: 1px solid black; padding: 3px;">Room Type</th>
+              <th  style="border: 1px solid black; padding: 3px;">Qty</th>
+              <th  style="border: 1px solid black; padding: 3px;">Room Rate</th>
+              <th  style="border: 1px solid black; padding: 3px;">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{transactions}}
+          </tbody>
+        </table>
+        
+       </div>
+       
+           <table>
+            <tr>
+                <td style="width: 50%;"></td>
+                <td style="width: 27%; font-size: 26px;">Grand Total </td>
+                <td style="width: 25%; font-size: 18px; align-items: center; text-align: right; vertical-align: middle;"> <b> &nbsp;  {{totalLocalDebitAmount}} </b> </td>
+            </tr>
+         </table>
+         <table>
+            <tr>
+                <td style="font-size: 9px;">Deposit : </td>
+                <td style="font-size: 9px;">: &nbsp; {{depositAmount}} </td>
+                <td style="font-size: 9px;">balance : </td>
+                <td style="font-size: 9px;"> : &nbsp; {{balanceAmount}} </td>
+            </tr>
+   
+           </table>
+
+         <!-- space Table -->
+         <table style="background-color: rgb(233, 233, 233);"> 
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+       <!-- space Table -->
+        
+           <table>
+            <tr><td>
+                <h5 style="font-size: 14px; font-weight: 600; text-align: center;">Bank Details </h5>
+            </td></tr>
+           </table>
+           <table style="background-color: beige;">
+            <tr>
+                <td style="width: 15%;">Account Name:</td>
+                <td style="width: 35%;">{{bankAccountName}}</td>
+                <td style="width: 15%;">Account No:</td>
+                <td style="width: 35%;">{{bankAccNo}}</td>
+            
+            </tr>
+            <tr>
+                <td style="width: 15%;">Bank:</td>
+                <td style="width: 35%;">{{bankName}}</td>
+                <td style="width: 25%;">Bank Code</td>
+                <td style="width: 25%;"> {{bankCode}}</td>
+            </tr>
+            <tr>
+                <td style="width: 15%;">SWIFT Code</td>
+                <td style="width: 35%;">{{swiftCode}}</td>
+                <td style="width: 25%;">Bank Address</td>
+                <td style="width: 25%;"> {{bankAddress}}</td>
+            </tr>
+                       </table>
+
+
+           
+        <table>
+            <tr>
+                <td style="width: 15%;">
+                    Payment Instuctions  :  
+                </td>
+                <td>
+                    {{paymentInstuctions}}
+                </td>
+            </tr>
+       
+        </table>
+        <table>
+            <tr>
+                <td style="font-size: 10px; text-align: center;">
+                    <h5 style="font-size: 14px; font-weight: 600; margin: 5px 0;">Terms & Conditions</h5>
+                    <ul style="font-size: 10px; text-align:justify;">
+                        <li> {{terms}} </li>
+                    </ul>
+
+            </tr>
+
+    
+        </table>
+
+        <table style="margin: 0;">
+            <tr>
+                <td>
+                    <div class="footer" style="float: right; text-align: center; margin: 0;">
+                        <p>[[UserName]]</p>
+                        <p style="margin: 0;">----------------------------------</p>
+                        <p>prepared by</p>
+                    </div>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="text-align: center;">
+                        Thank you very much for your value support and look forward to hearing from you soon.
+                    </div>
+                    
+                </td>
+            </tr>
+
+         
+        </table>
+        
+    </table>
+
+    <table style="margin: 0;">
+        <tr>
+            <td style="display: flex; justify-content: space-around; border-width: 0;"> 
+                <p>{{propertyEmail}} </p>
+                <p>{{propertyWeb}}</p>
+                <p> {{propertyContact}}</p>
+            </td>
+        </tr>
+    </table>
+
+
+
+        </div>
+
+    </div>
+
+
+
+    <p style="text-align: center; font-size: 8px;">Sponsored by IDSNEXT</p>
+
+</body>
+<!--Design By:  Lahiru Prbath
+PSG Sri Lanka
+lahiru.prabath@idsnext.com -->
+</html> 
